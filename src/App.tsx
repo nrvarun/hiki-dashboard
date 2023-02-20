@@ -1,4 +1,9 @@
-import "@fontsource/mulish";
+import "@fontsource/mulish/300.css";
+import "@fontsource/mulish/400.css";
+import "@fontsource/mulish/500.css";
+import "@fontsource/mulish/600.css";
+import "@fontsource/mulish/700.css";
+
 import "./index.scss";
 
 import { Routes, Route } from "react-router-dom";
