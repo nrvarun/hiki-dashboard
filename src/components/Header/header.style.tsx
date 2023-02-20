@@ -26,7 +26,7 @@ export const StyledHeaderSearchInput = styled(Input)`
   }
 
   input {
-    padding: 0 16px !important;
+    padding: 0 16px 0 0 !important;
   }
 
   svg {

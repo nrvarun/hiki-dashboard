@@ -22,6 +22,7 @@ const Header = ({ firstTimeUser, fullWidth = false }: Props) => {
         <Grid container spacing="2">
           <Grid item xs={4}>
             <StyledHeaderSearchInput
+              placeholder="Search"
               endAdornment={<SearchOutlined color="action" />}
             ></StyledHeaderSearchInput>
           </Grid>
