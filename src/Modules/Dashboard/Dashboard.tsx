@@ -5,7 +5,10 @@ import Clients from "./Clients";
 import Colleagues from "./Colleagues";
 import Documents from "./Documents";
 import Invoice from "./Invoice";
+import LeaveRequests from "./LeaveRequests";
+import News from "./News";
 import Task from "./Task";
+import TimeSheets from "./TimeSheets";
 import UpcomingActivities from "./UpcomingActivities";
 
 type Props = {};
@@ -35,6 +38,15 @@ const Dashboard = (props: Props) => {
         </Grid>
         <Grid item xs={4}>
           <UpcomingActivities />
+        </Grid>
+        <Grid item xs={4}>
+          <News />
+        </Grid>
+        <Grid item xs={4}>
+          <LeaveRequests />
+        </Grid>
+        <Grid item xs={4}>
+          <TimeSheets />
         </Grid>
       </Grid>
     </AppLayout>

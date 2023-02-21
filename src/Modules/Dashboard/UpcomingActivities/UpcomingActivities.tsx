@@ -22,6 +22,8 @@ const UpcomingActivities = (props: Props) => {
           <List sx={{ width: "100%" }} disablePadding>
             <UpcomingActivity />
             <UpcomingActivity />
+            <UpcomingActivity />
+            <UpcomingActivity />
           </List>
         </Grid>
         <Grid item xs={12} textAlign="right" marginTop={4}>
