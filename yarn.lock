@@ -1695,10 +1695,10 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@mui/x-date-pickers@^5.0.17":
-  version "5.0.17"
-  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-5.0.17.tgz#92a5ba3dec828ea1cdb6e5d3e96c7b0523507bb8"
-  integrity sha512-Rxm2OqSLGXijdwCpt8dzbuDIWNids7bUsuxB/ci66MB4ULfTswhFXZTcVvEm/SKZvtkUmDPQmMemdNg78440iA==
+"@mui/x-date-pickers@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@mui/x-date-pickers/-/x-date-pickers-5.0.19.tgz#1a51477a702a31401e30d3e34be6934a85e9478f"
+  integrity sha512-D8zFyFgwA6faPCTM//3SG17RqCegczKQS9wF/toemhjsP7Ps4ape/llHqowL/BZLbi14OXV0Ud10tfUyVP7Q/Q==
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@date-io/core" "^2.15.0"
@@ -7871,10 +7871,10 @@ react-from-dom@^0.6.2:
   resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.6.2.tgz#9da903a508c91c013b55afcd59348b8b0a39bdb4"
   integrity sha512-qvWWTL/4xw4k/Dywd41RBpLQUSq97csuv15qrxN+izNeLYlD9wn5W8LspbfYe5CWbaSdkZ72BsaYBPQf2x4VbQ==
 
-react-hook-form@^7.42.1:
-  version "7.42.1"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.42.1.tgz#c6396ca684716d89abc1c7e64343badfd30c56c6"
-  integrity sha512-2UIGqwMZksd5HS55crTT1ATLTr0rAI4jS7yVuqTaoRVDhY2Qc4IyjskCmpnmdYqUNOYFy04vW253tb2JRVh+IQ==
+react-hook-form@^7.43.2:
+  version "7.43.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.43.2.tgz#d8ff71956dc3de258dce19d4b1c7e1c6a0188e67"
+  integrity sha512-NvD3Oe2Y9hhqo2R4I4iJigDzSLpdMnzUpNMxlnzTbdiT7NT3BW0GxWCzEtwPudZMUPbZhNcSy1EcGAygyhDORg==
 
 react-inlinesvg@^3.0.1:
   version "3.0.1"

@@ -7,10 +7,12 @@ type Props = {};
 
 const TimeSheets = (props: Props) => {
   return (
-    <DashboardCard title="Leave Requests">
+    <DashboardCard title="Timesheet">
       <Grid container marginTop={4}>
         <Grid item xs={12}>
           <StyledTimeSheetList disablePadding>
+            <TimeSheet />
+            <TimeSheet />
             <TimeSheet />
             <TimeSheet />
           </StyledTimeSheetList>

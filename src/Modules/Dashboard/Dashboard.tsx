@@ -5,10 +5,12 @@ import Clients from "./Clients";
 import Colleagues from "./Colleagues";
 import Documents from "./Documents";
 import Invoice from "./Invoice";
+import LeaveAppln from "./LeaveAppln";
 import LeaveRequests from "./LeaveRequests";
 import News from "./News";
 import Task from "./Task";
 import TimeSheets from "./TimeSheets";
+import TodayTimesheet from "./TodayTimesheet";
 import UpcomingActivities from "./UpcomingActivities";
 
 type Props = {};
@@ -47,6 +49,12 @@ const Dashboard = (props: Props) => {
         </Grid>
         <Grid item xs={4}>
           <TimeSheets />
+        </Grid>
+        <Grid item xs={4}>
+          <TodayTimesheet />
+        </Grid>
+        <Grid item xs={4}>
+          <LeaveAppln />
         </Grid>
       </Grid>
     </AppLayout>

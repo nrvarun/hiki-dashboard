@@ -82,7 +82,7 @@ export const StyledTimeDetail = styled.p`
 `;
 
 export const StyledTimeSheetList = styled(List)`
-  max-height: 360px;
+  max-height: 504px;
   overflow: auto;
 
   ::-webkit-scrollbar {
