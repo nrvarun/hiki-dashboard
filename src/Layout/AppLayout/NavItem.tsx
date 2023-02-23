@@ -5,11 +5,12 @@ type Props = {
   icon: string;
   title: string;
   counter: number;
+  active?: boolean;
 };
 
-const NavItem = ({ icon, title, counter = 0 }: Props) => {
+const NavItem = ({ icon, title, counter = 0, active }: Props) => {
   return (
-    <StyledAppNavItem>
+    <StyledAppNavItem isActive={active}>
       <SVG src={icon} color="#1c1c1c" opacity={0.6} />
       <StyledAppNavItemBody>
         <h4>{title}</h4>

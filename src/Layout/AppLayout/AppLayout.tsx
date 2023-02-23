@@ -25,66 +25,77 @@ const PRIMARY_NAV = [
     label: "Dashboard",
     icon: "/images/icons/nav/dashboard.svg",
     counter: 0,
+    active: true,
   },
   {
     id: 2,
     label: "My Firm",
     icon: "/images/icons/nav/firm.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 3,
     label: "Clients",
     icon: "/images/icons/nav/clients.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 4,
     label: "Messages",
     icon: "/images/icons/nav/messages.svg",
     counter: 16,
+    active: false,
   },
   {
     id: 5,
     label: "Tasks",
     icon: "/images/icons/nav/tasks.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 6,
     label: "Timesheet",
     icon: "/images/icons/nav/timesheet.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 7,
     label: "Invoices",
     icon: "/images/icons/nav/invoices.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 8,
     label: "Documents",
     icon: "/images/icons/nav/documents.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 9,
     label: "News",
     icon: "/images/icons/nav/news.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 10,
     label: "Settings",
     icon: "/images/icons/nav/settings.svg",
     counter: 0,
+    active: false,
   },
   {
     id: 11,
     label: "Logout",
     icon: "/images/icons/nav/logout.svg",
     counter: 0,
+    active: false,
   },
 ];
 
@@ -100,6 +111,7 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
             {PRIMARY_NAV.slice(0, 3).map((nav, index) => (
               <li key={nav.id}>
                 <NavItem
+                  active={nav.active}
                   icon={nav.icon}
                   title={nav.label}
                   counter={nav.counter}
@@ -112,6 +124,7 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
             {PRIMARY_NAV.slice(3, 9).map((nav, index) => (
               <li key={nav.id}>
                 <NavItem
+                  active={nav.active}
                   icon={nav.icon}
                   title={nav.label}
                   counter={nav.counter}
@@ -124,6 +137,7 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
             {PRIMARY_NAV.slice(9).map((nav, index) => (
               <li key={nav.id}>
                 <NavItem
+                  active={nav.active}
                   icon={nav.icon}
                   title={nav.label}
                   counter={nav.counter}

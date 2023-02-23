@@ -41,7 +41,7 @@ const Invoice = (props: Props) => {
             />
           </Grid>
         </Grid>
-        <Grid container>
+        <Grid container marginTop={1}>
           <Grid item xs={6}>
             <StyledDashCardSummaryDetail>Unpaid</StyledDashCardSummaryDetail>
           </Grid>
@@ -54,7 +54,7 @@ const Invoice = (props: Props) => {
           <Grid item xs={12}>
             <StyledProgressBar
               variant="determinate"
-              value={90}
+              value={20}
               bgcolor="rgba(236, 65, 118, 0.08)"
               fillcolor="#EC4176"
             />

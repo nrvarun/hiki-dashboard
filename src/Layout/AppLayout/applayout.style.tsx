@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import styled from "styled-components";
 
 export const StyledAppLayoutWrapper = styled.section`
@@ -32,10 +33,25 @@ export const StyledAppNavList = styled.ul`
   list-style: none;
 `;
 
-export const StyledAppNavItem = styled.nav`
+export const StyledAppNavItem = styled(Button)<{ isActive?: boolean }>`
   padding: 8px 14px;
   display: flex;
   align-items: center;
+  width: 100%;
+  background: ${({ isActive }) => (isActive ? "#F2F9FF" : "transparent")};
+
+  &:before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: #0052cc;
+    border-radius: 0px 8px 8px 0px;
+    position: absolute;
+    left: -32px;
+    top: 0;
+    bottom: 0;
+    display: ${({ isActive }) => (isActive ? "block" : "none")};
+  }
 
   svg {
     margin: 0 12px 0 0;
@@ -44,6 +60,7 @@ export const StyledAppNavItem = styled.nav`
 
     path {
       stroke: currentColor;
+      stroke: ${({ isActive }) => (isActive ? "#0052CC" : "currentColor")};
     }
   }
 
@@ -51,8 +68,8 @@ export const StyledAppNavItem = styled.nav`
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: #888888;
     margin: 0;
+    color: ${({ isActive }) => (isActive ? "#0052CC" : "#888888")};
   }
 
   p {
