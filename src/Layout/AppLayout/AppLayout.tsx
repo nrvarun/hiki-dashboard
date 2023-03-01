@@ -147,7 +147,11 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
           </StyledAppNavList>
         </StyledAppDrawerBody>
       </StyledAppDrawer>
-      <Header fullWidth={fluidHeader} firstTimeUser={firstTimeUser} />
+      <Header
+        fullWidth={fluidHeader}
+        firstTimeUser={firstTimeUser}
+        addView={false}
+      />
       <StyledAppBody>{children}</StyledAppBody>
     </StyledAppLayoutWrapper>
   );

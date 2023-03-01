@@ -26,6 +26,10 @@ export const StyledFormCTA = styled(Button)<FormCTAType>`
     cursor: pointer;
     text-align: center;
 
+    &.Mui-disabled {
+      background: rgba(136, 136, 136, 0.1);
+    }
+
     svg {
       margin: 0 0 0 8px;
     }
@@ -45,29 +49,54 @@ export const StyledFormCTAOutlined = styled(StyledFormCTA)`
   }
 `;
 
-export const StyledTermsText = styled.p`
-  font-size: 16px;
-  line-height: 20px;
-  color: #888888 !important;
-  text-align: right;
-
-  span {
-    font-weight: 600;
-    color: #3554d1;
-    text-decoration: underline;
-  }
+export const StyledFieldError = styled.p`
+  font-weight: 500 !important;
+  font-size: 12px !important;
+  line-height: 150% !important;
+  color: #eb4747 !important;
+  margin: 0 0 4px 0 !important;
 `;
 
-export const StyledSignupText = styled.p`
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #888888 !important;
-  text-align: center;
+export const StyledFormRadios = styled.div`
+  .MuiFormControlLabel-root {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
 
-  span {
-    margin: 0 4px;
-    color: #3554d1 !important;
-    text-decoration: underline;
+  svg {
+    path {
+      fill: currentColor;
+      stroke: currentColor;
+    }
+  }
+
+  .MuiRadio-root {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+  }
+
+  .Mui-checked {
+    & + .MuiTypography-root {
+      color: #0052cc;
+      background: rgba(0, 82, 204, 0.1);
+      border: 1px solid #0052cc;
+
+      svg {
+        color: #0052cc;
+      }
+    }
+  }
+
+  .MuiTypography-root {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(136, 136, 136, 0.8);
+    width: 100%;
+    border: 1px solid rgba(136, 136, 136, 0.4);
+    border-radius: 4px;
+    padding: 10px 24px;
   }
 `;

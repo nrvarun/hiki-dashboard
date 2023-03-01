@@ -74,3 +74,46 @@ code {
     }
   }
 }
+
+.add-form-stepper {
+  .MuiStep-root {
+    .MuiStepLabel-iconContainer {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      margin: 0 4px 0 0;
+      border-radius: 50%;
+      border: 1px solid rgba(136, 136, 136, 0.4);
+    }
+  
+    &.custom-current-step {
+      .MuiStepLabel-iconContainer {
+        background-color: #0052CC !important;
+  
+        svg {
+          color: #fff !important;
+        }
+      }
+  
+    }
+
+    &.Mui-completed {
+      .MuiStepLabel-iconContainer {
+        background-color: #44A26C;
+      }
+      
+      svg {
+        path {
+          color: #fff !important;
+        }
+      }
+    }
+  
+    
+  }
+
+  
+}

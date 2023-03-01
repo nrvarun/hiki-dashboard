@@ -1,11 +1,12 @@
 import { IconButton, Input } from "@mui/material";
 import styled from "styled-components";
 
-export const StyledHeaderWrapper = styled.header`
+export const StyledHeaderWrapper = styled.header<{ isAddView: boolean }>`
   position: fixed;
   top: 0;
   right: 0;
-  width: calc(100% - 240px);
+  width: ${({ isAddView = false }) =>
+    isAddView ? "calc(100% - 0px)" : "calc(100% - 240px)"};
   background: #ffffff;
   padding: 18px 36px;
   box-shadow: 0px 0px 15px rgba(0, 82, 204, 0.1);

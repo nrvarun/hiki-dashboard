@@ -13,18 +13,27 @@ import {
 type Props = {
   firstTimeUser?: boolean;
   fullWidth?: boolean;
+  addView?: boolean;
 };
 
-const Header = ({ firstTimeUser, fullWidth = false }: Props) => {
+const Header = ({
+  addView = false,
+  firstTimeUser,
+  fullWidth = false,
+}: Props) => {
   return (
-    <StyledHeaderWrapper>
+    <StyledHeaderWrapper isAddView={addView}>
       <Container maxWidth={fullWidth ? false : "xl"}>
-        <Grid container spacing="2">
+        <Grid container spacing="2" alignItems="center">
           <Grid item xs={4}>
-            <StyledHeaderSearchInput
-              placeholder="Search"
-              endAdornment={<SearchOutlined color="action" />}
-            ></StyledHeaderSearchInput>
+            {addView ? (
+              <img src="/images/logo.svg" alt="" />
+            ) : (
+              <StyledHeaderSearchInput
+                placeholder="Search"
+                endAdornment={<SearchOutlined color="action" />}
+              ></StyledHeaderSearchInput>
+            )}
           </Grid>
           <Grid item xs={8} textAlign="right">
             <StyledHeaderFlexCenterWrapper>

@@ -7,6 +7,9 @@ export const HIKI_THEME = createTheme({
     primary: {
       main: "#0052CC",
     },
+    error: {
+      main: "#EB4747",
+    },
   },
   typography: {
     fontFamily: "Mulish",
