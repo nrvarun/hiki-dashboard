@@ -1,12 +1,15 @@
-import { CheckCircle } from "@mui/icons-material";
+import { CheckCircle, CheckOutlined } from "@mui/icons-material";
 import {
+  Button,
   FormControlLabel,
   Grid,
+  Menu,
   MenuItem,
   Radio,
   RadioGroup,
   TextField,
 } from "@mui/material";
+import { DesktopDatePicker } from "@mui/x-date-pickers";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import {
@@ -24,7 +27,7 @@ import {
   StyledProfilePic,
   StyledProfilePicWrapper,
   StyledRadioLabel,
-} from "../addclnt.style";
+} from "../addemployee.style";
 
 export type FormStepProps = {
   activeStep: number;
@@ -212,22 +215,21 @@ const Bank = ({ prevStep, updateForm, nextStep }: FormStepProps) => {
                 <Controller
                   name="acNo"
                   control={control}
-                  rules={{
-                    required: true,
-                    maxLength: 12,
-                  }}
+                  rules={{ required: true, maxLength: 12 }}
                   render={({ field, fieldState }) => (
-                    <TextField
-                      style={{
-                        width: "100%",
-                      }}
-                      helperText={
-                        fieldState.error && "Account Number is required"
-                      }
-                      error={fieldState.error ? true : false}
-                      placeholder="As per the records"
-                      {...field}
-                    />
+                    <>
+                      <TextField
+                        style={{
+                          width: "100%",
+                        }}
+                        helperText={
+                          fieldState.error && "Account Number is required"
+                        }
+                        error={fieldState.error ? true : false}
+                        placeholder="As per the records"
+                        {...field}
+                      />
+                    </>
                   )}
                 />
               </Grid>
@@ -243,27 +245,29 @@ const Bank = ({ prevStep, updateForm, nextStep }: FormStepProps) => {
                     maxLength: 16,
                   }}
                   render={({ field, fieldState }) => (
-                    <TextField
-                      style={{
-                        width: "100%",
-                      }}
-                      helperText={
-                        fieldState.error
-                          ? "Account Number is required"
-                          : fieldState.isTouched && field.value !== accountNo
-                          ? "Accounts do not Match"
-                          : ""
-                      }
-                      error={
-                        fieldState.error
-                          ? true
-                          : fieldState.isTouched && field.value !== accountNo
-                          ? true
-                          : false
-                      }
-                      placeholder="Re-enter the account number"
-                      {...field}
-                    />
+                    <>
+                      <TextField
+                        style={{
+                          width: "100%",
+                        }}
+                        helperText={
+                          fieldState.error
+                            ? "Account Number is required"
+                            : fieldState.isTouched && field.value !== accountNo
+                            ? "Accounts do not Match"
+                            : ""
+                        }
+                        error={
+                          fieldState.error
+                            ? true
+                            : fieldState.isTouched && field.value !== accountNo
+                            ? true
+                            : false
+                        }
+                        placeholder="Re-enter the account number"
+                        {...field}
+                      />
+                    </>
                   )}
                 />
               </Grid>

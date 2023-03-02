@@ -6,7 +6,7 @@ import {
   StyledAddClientBody,
   StyledAddClientHeader,
   StyledAddClientWrapper,
-} from "./addclnt.style";
+} from "./addemployee.style";
 import Bank from "./Bank";
 import BasicInfo from "./BasicInfo";
 import KeyDocs from "./KeyDocs";
@@ -14,6 +14,8 @@ import KeyDocs from "./KeyDocs";
 import InfoIcon from "./InfoIcon";
 import BankIcon from "./BankIcon";
 import DocsIcon from "./DocsIcon";
+import PermissionsIcon from "./PermissionsIcon";
+import Permissions from "./Permissions";
 
 type Props = {};
 
@@ -33,10 +35,15 @@ const STEPS = [
     title: "Key Documents",
     icon: DocsIcon,
   },
+  {
+    id: 4,
+    title: "Permissions",
+    icon: PermissionsIcon,
+  },
 ];
 
 const AddClient = (props: Props) => {
-  const [activeStep, setActiveStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(3);
   const [formValues, setFormValues] = useState({});
 
   const handleStep = (step: number) => () => {
@@ -74,6 +81,9 @@ const AddClient = (props: Props) => {
       case 2:
         return <KeyDocs {...actionProps} />;
 
+      case 3:
+        return <Permissions {...actionProps} />;
+
       default:
         return <BasicInfo {...actionProps} />;
     }
@@ -104,7 +114,7 @@ const AddClient = (props: Props) => {
                 margin: "0 0 0 12px",
               }}
             >
-              Add Client
+              Add Colleague
             </span>
           </NavLink>
         </Grid>

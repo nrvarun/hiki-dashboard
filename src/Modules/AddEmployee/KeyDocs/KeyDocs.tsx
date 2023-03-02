@@ -11,7 +11,7 @@ import {
   StyledDocsListingItem,
   StyledFieldTitle,
   StyledFormBodyWrapper,
-} from "../addclnt.style";
+} from "../addemployee.style";
 
 import KeyDocEntry from "./KeyDocEntry";
 
@@ -41,6 +41,7 @@ const KeyDocs = ({
   });
 
   const onSubmit = (values: any) => {
+    alert("did we submit");
     updateForm(values);
     nextStep();
   };
@@ -117,7 +118,7 @@ const KeyDocs = ({
                   }}
                 >
                   <StyledFormCTA type="submit" disabled={fields.length === 0}>
-                    Submit
+                    Next
                     <svg
                       width="24"
                       height="24"

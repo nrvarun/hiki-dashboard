@@ -10,12 +10,14 @@ import { Routes, Route } from "react-router-dom";
 
 import Dashboard from "Modules/Dashboard";
 import AddClient from "Modules/AddClient";
+import AddEmployee from "Modules/AddEmployee";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
       <Route path="/add-client" element={<AddClient />} />
+      <Route path="/add-employee" element={<AddEmployee />} />
     </Routes>
   );
 }
