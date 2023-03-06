@@ -19,7 +19,15 @@ import AppLayout from "Layout/AppLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<AppLayout fluidHeader firstTimeUser={false} />}>
+    <Route
+      path="/"
+      element={<AppLayout fluidHeader firstTimeUser={false} />}
+      errorElement={
+        <AppLayout fluidHeader firstTimeUser={false}>
+          <p>Error Not Found!</p>
+        </AppLayout>
+      }
+    >
       <Route index element={<Dashboard />} />
       <Route path="firm" element={<MyFirm />} />
     </Route>
