@@ -6,20 +6,28 @@ import "@fontsource/mulish/700.css";
 
 import "./index.scss";
 
-import { Routes, Route } from "react-router-dom";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 
 import Dashboard from "Modules/Dashboard";
-import AddClient from "Modules/AddClient";
-import AddEmployee from "Modules/AddEmployee";
+import MyFirm from "Modules/MyFirm";
+import AppLayout from "Layout/AppLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<AppLayout fluidHeader firstTimeUser={false} />}>
+      <Route index element={<Dashboard />} />
+      <Route path="firm" element={<MyFirm />} />
+    </Route>
+  )
+);
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Dashboard />} />
-      <Route path="/add-client" element={<AddClient />} />
-      <Route path="/add-employee" element={<AddEmployee />} />
-    </Routes>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -3,9 +3,9 @@ import DashboardCard from "components/DashboardCard";
 
 type Props = {};
 
-const Dashboard = (props: Props) => {
+const MyFirm = (props: Props) => {
   return (
-    <DashboardCard title="Dashboard">
+    <DashboardCard title="My Firm">
       <Grid container spacing={2}>
         <Grid item xs={12}>
           ---
@@ -15,4 +15,4 @@ const Dashboard = (props: Props) => {
   );
 };
 
-export default Dashboard;
+export default MyFirm;

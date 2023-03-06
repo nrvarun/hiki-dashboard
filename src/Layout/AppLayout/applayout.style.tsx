@@ -27,18 +27,13 @@ export const StyledAppDrawerBody = styled.section`
   position: relative;
 `;
 
-export const StyledAppNavList = styled.ul`
-  position: relative;
-  padding: 0;
-  list-style: none;
-`;
-
 export const StyledAppNavItem = styled(Button)<{ isActive?: boolean }>`
   padding: 8px 14px;
   display: flex;
   align-items: center;
   width: 100%;
   background: ${({ isActive }) => (isActive ? "#F2F9FF" : "transparent")};
+  margin: 0 0 4px 0;
 
   &:before {
     content: "";
@@ -81,6 +76,45 @@ export const StyledAppNavItem = styled(Button)<{ isActive?: boolean }>`
     border-radius: 10px;
     padding: 0px 4px;
     color: #ffffff;
+  }
+`;
+
+export const StyledAppNavList = styled.ul`
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  li {
+    a {
+      &,
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.active {
+        ${StyledAppNavItem} {
+          background: #f2f9ff;
+
+          &:before {
+            display: "block";
+          }
+
+          svg {
+            path {
+              stroke: #0052cc;
+            }
+          }
+
+          h4 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            margin: 0;
+            color: #0052cc;
+          }
+        }
+      }
+    }
   }
 `;
 

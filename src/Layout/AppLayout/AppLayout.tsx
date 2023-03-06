@@ -12,6 +12,7 @@ import {
 
 import { Divider } from "@mui/material";
 import NavItem from "./NavItem";
+import { NavLink, Outlet } from "react-router-dom";
 
 type Props = {
   fluidHeader: boolean;
@@ -25,77 +26,77 @@ const PRIMARY_NAV = [
     label: "Dashboard",
     icon: "/images/icons/nav/dashboard.svg",
     counter: 0,
-    active: true,
+    route: "/",
   },
   {
     id: 2,
     label: "My Firm",
     icon: "/images/icons/nav/firm.svg",
     counter: 0,
-    active: false,
+    route: "/firm",
   },
   {
     id: 3,
     label: "Clients",
     icon: "/images/icons/nav/clients.svg",
     counter: 0,
-    active: false,
+    route: "/clients",
   },
   {
     id: 4,
     label: "Messages",
+    route: "/messages",
     icon: "/images/icons/nav/messages.svg",
     counter: 16,
-    active: false,
   },
   {
     id: 5,
     label: "Tasks",
     icon: "/images/icons/nav/tasks.svg",
     counter: 0,
-    active: false,
+    route: "/tasks",
   },
   {
     id: 6,
     label: "Timesheet",
     icon: "/images/icons/nav/timesheet.svg",
     counter: 0,
-    active: false,
+    route: "/timesheet",
   },
   {
     id: 7,
     label: "Invoices",
     icon: "/images/icons/nav/invoices.svg",
     counter: 0,
-    active: false,
+    route: "/invoices",
   },
   {
     id: 8,
     label: "Documents",
     icon: "/images/icons/nav/documents.svg",
     counter: 0,
-    active: false,
+    route: "/documents",
   },
   {
     id: 9,
     label: "News",
     icon: "/images/icons/nav/news.svg",
     counter: 0,
-    active: false,
+    route: "/news",
   },
   {
     id: 10,
     label: "Settings",
     icon: "/images/icons/nav/settings.svg",
     counter: 0,
-    active: false,
+    route: "/settings",
   },
   {
     id: 11,
     label: "Logout",
     icon: "/images/icons/nav/logout.svg",
     counter: 0,
-    active: false,
+    route: "/sigin",
   },
 ];
 
@@ -110,12 +111,13 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
           <StyledAppNavList>
             {PRIMARY_NAV.slice(0, 3).map((nav, index) => (
               <li key={nav.id}>
-                <NavItem
-                  active={nav.active}
-                  icon={nav.icon}
-                  title={nav.label}
-                  counter={nav.counter}
-                />
+                <NavLink to={nav.route}>
+                  <NavItem
+                    icon={nav.icon}
+                    title={nav.label}
+                    counter={nav.counter}
+                  />
+                </NavLink>
               </li>
             ))}
           </StyledAppNavList>
@@ -123,12 +125,13 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
           <StyledAppNavList>
             {PRIMARY_NAV.slice(3, 9).map((nav, index) => (
               <li key={nav.id}>
-                <NavItem
-                  active={nav.active}
-                  icon={nav.icon}
-                  title={nav.label}
-                  counter={nav.counter}
-                />
+                <NavLink to={nav.route}>
+                  <NavItem
+                    icon={nav.icon}
+                    title={nav.label}
+                    counter={nav.counter}
+                  />
+                </NavLink>
               </li>
             ))}
           </StyledAppNavList>
@@ -136,12 +139,13 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
           <StyledAppNavList>
             {PRIMARY_NAV.slice(9).map((nav, index) => (
               <li key={nav.id}>
-                <NavItem
-                  active={nav.active}
-                  icon={nav.icon}
-                  title={nav.label}
-                  counter={nav.counter}
-                />
+                <NavLink to={nav.route}>
+                  <NavItem
+                    icon={nav.icon}
+                    title={nav.label}
+                    counter={nav.counter}
+                  />
+                </NavLink>
               </li>
             ))}
           </StyledAppNavList>
@@ -152,7 +156,9 @@ const AppLayout = ({ fluidHeader, firstTimeUser, children }: Props) => {
         firstTimeUser={firstTimeUser}
         addView={false}
       />
-      <StyledAppBody>{children}</StyledAppBody>
+      <StyledAppBody>
+        <Outlet />
+      </StyledAppBody>
     </StyledAppLayoutWrapper>
   );
 };
