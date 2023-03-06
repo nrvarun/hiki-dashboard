@@ -1,5 +1,6 @@
 import { Divider, Grid, Link, List } from "@mui/material";
 import DashboardCard from "components/DashboardCard";
+import { NavLink } from "react-router-dom";
 import {
   StyledDashCardSummary,
   StyledDashCardSummaryDetail,
@@ -14,9 +15,11 @@ const Clients = (props: Props) => {
     <DashboardCard
       title="Clients"
       action={
-        <Link href="#" variant="subtitle2">
-          Add Client
-        </Link>
+        <NavLink to="/add-client">
+          <Link href="#" variant="subtitle2">
+            Add Client
+          </Link>
+        </NavLink>
       }
     >
       <StyledDashCardSummary>

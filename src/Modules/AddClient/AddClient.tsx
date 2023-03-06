@@ -36,7 +36,7 @@ const STEPS = [
 ];
 
 const AddClient = (props: Props) => {
-  const [activeStep, setActiveStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(0);
   const [formValues, setFormValues] = useState({});
 
   const handleStep = (step: number) => () => {
