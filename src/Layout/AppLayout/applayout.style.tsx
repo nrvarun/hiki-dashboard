@@ -52,11 +52,7 @@ export const StyledAppNavItem = styled(Button)<{ isActive?: boolean }>`
     margin: 0 12px 0 0;
     height: 16px;
     width: auto;
-
-    path {
-      stroke: currentColor;
-      stroke: ${({ isActive }) => (isActive ? "#0052CC" : "currentColor")};
-    }
+    color: #888;
   }
 
   h4 {
@@ -100,9 +96,7 @@ export const StyledAppNavList = styled.ul`
           }
 
           svg {
-            path {
-              stroke: #0052cc;
-            }
+            color: #0052cc;
           }
 
           h4 {
